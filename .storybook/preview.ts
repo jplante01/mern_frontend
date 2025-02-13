@@ -1,7 +1,8 @@
-import type { Preview } from '@storybook/react';
+import '../src/index.css'; // Import your Tailwind CSS
 
-const preview: Preview = {
+export const preview = {
   parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -9,6 +10,4 @@ const preview: Preview = {
       },
     },
   },
-};
-
-export default preview;
+}; 
